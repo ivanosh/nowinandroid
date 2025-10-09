@@ -16,7 +16,6 @@
 
 package com.google.samples.apps.nowinandroid.baselineprofile
 
-import androidx.benchmark.macro.MacrobenchmarkScope
 import androidx.benchmark.macro.junit4.BaselineProfileRule
 import com.google.samples.apps.nowinandroid.PACKAGE_NAME
 import com.google.samples.apps.nowinandroid.startActivityAndAllowNotifications
