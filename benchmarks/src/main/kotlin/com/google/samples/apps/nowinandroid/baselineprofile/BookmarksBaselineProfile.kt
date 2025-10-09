@@ -32,6 +32,7 @@ class BookmarksBaselineProfile {
     @Test
     fun generate() =
         baselineProfileRule.collect(PACKAGE_NAME) {
+            println(">>>>> BookmarksBaselineProfile: $iteration")
             startActivityAndAllowNotifications()
 
             // Navigate to saved screen

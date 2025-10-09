@@ -34,6 +34,7 @@ class ForYouBaselineProfile {
     @Test
     fun generate() =
         baselineProfileRule.collect(PACKAGE_NAME) {
+            println(">>>>> ForYouBaselineProfile: $iteration")
             startActivityAndAllowNotifications()
 
             // Scroll the feed critical user journey

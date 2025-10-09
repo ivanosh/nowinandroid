@@ -33,6 +33,7 @@ class InterestsBaselineProfile {
     @Test
     fun generate() =
         baselineProfileRule.collect(PACKAGE_NAME) {
+            println(">>>>> InterestsBaselineProfile: $iteration")
             startActivityAndAllowNotifications()
 
             // Navigate to interests screen

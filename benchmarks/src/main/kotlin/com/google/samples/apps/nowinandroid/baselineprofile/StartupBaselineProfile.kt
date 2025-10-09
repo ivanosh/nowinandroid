@@ -34,6 +34,9 @@ class StartupBaselineProfile {
     fun generate() = baselineProfileRule.collect(
         PACKAGE_NAME,
         includeInStartupProfile = true,
-        profileBlock = MacrobenchmarkScope::startActivityAndAllowNotifications,
+        profileBlock = {
+            println(">>>>> StartupBaselineProfile: $iteration")
+            startActivityAndAllowNotifications()
+        },
     )
 }
