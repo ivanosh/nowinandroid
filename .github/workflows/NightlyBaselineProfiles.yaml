@@ -58,7 +58,15 @@ jobs:
           -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect"
 
       - name: Build all build type and flavor permutations including baseline profiles
-        run: ./gradlew :app:assemble
+        run: ./gradlew :app:generateBaselineProfile --stacktrace
              -Pandroid.testInstrumentationRunnerArguments.androidx.benchmark.enabledRules=baselineprofile
              -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect"
              -Pandroid.experimental.testOptions.managedDevices.emulator.showKernelLogging=true
+
+
+      - name: Commit Baseline Profiles
+        run: |
+          git config --global user.name 'Baseline Profiles - GitHub Actions'
+          git config --global user.email 'github@actions'
+          git commit -am "Generate baseline profiles"
+          git push
