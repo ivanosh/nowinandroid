@@ -26,6 +26,6 @@ android {
 dependencies {
     implementation(libs.androidx.compose.runtime)
 
-    prodImplementation(platform(libs.firebase.bom))
-    prodImplementation(libs.firebase.analytics)
+    //prodImplementation(platform(libs.firebase.bom))
+    //prodImplementation(libs.firebase.analytics)
 }
